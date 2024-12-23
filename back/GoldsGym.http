@@ -1,0 +1,25 @@
+@GoldsGym_HostAddress = http://localhost:5124
+@baseUrl = https://localhost:7037/api
+
+GET {{GoldsGym_HostAddress}}/weatherforecast/
+Accept: application/json
+
+### Регистрация
+POST {{baseUrl}}/Auth/register
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "password": "testpassword"
+}
+
+### Логин
+POST {{baseUrl}}/Auth/login
+Content-Type: application/json
+
+{
+    "username": "testuser",
+    "password": "testpassword"
+}
+
+###
