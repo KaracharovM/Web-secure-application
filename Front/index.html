@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <title>Gold's Gym</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Боковая навигация -->
+        <nav class="sidebar">
+            <ul>
+                <li><a href="#register">Регистрация</a></li>
+                <li><a href="#schedule">Расписание тренировок</a></li>
+                <li><a href="#stats">Статистика</a></li>
+                <li><a href="#players">Игроки</a></li>
+            </ul>
+        </nav>
+
+        <!-- Основной контент -->
+        <div class="main-content">
+            <header class="header">
+                <div class="logo">Gold's Gym</div>
+                <nav class="navbar">
+                    <ul>
+                        <li><a href="#register">Регистрация</a></li>
+                        <li><a href="#schedule">Расписание тренировок</a></li>
+                        <li><a href="#stats">Статистика</a></li>
+                        <li><a href="#players">Игроки</a></li>
+                    </ul>
+                </nav>
+            </header>
+
+            <section class="hero">
+                <div class="hero-content">
+                    <h1>Добро пожаловать в Gold's Gym!</h1>
+                    <p class="registr">Войдите или зарегистрируйтесь</p>
+                </div>
+                <div class="hero-image-wrapper">
+                    <img src="/images/gym.jpg" alt="Спортивный фон" class="hero-image">
+                </div>
+                <form class="login-form" id="loginForm">
+                    <div class="error-container"></div>
+                    <input type="text" 
+                           id="loginUsername" 
+                           placeholder="Логин" 
+                           required 
+                           minlength="3" 
+                           autocomplete="username">
+                    <input type="password" 
+                           id="loginPassword" 
+                           placeholder="Пароль" 
+                           required 
+                           minlength="6" 
+                           autocomplete="current-password">
+                    <button type="submit">Войти</button>
+                    <button type="button" class="register">Зарегистрироваться</button>
+                </form>
+            </section>
+
+            <section id="schedule" class="schedule">
+                <h2>Расписание тренировок</h2>
+                <div class="cards">
+                    <div class="card">Бег</div>
+                    <div class="card">Плавание</div>
+                    <div class="card">Йога</div>
+                </div>
+            </section>
+
+            <section id="stats" class="stats">
+                <h2>Статистика</h2>
+                <div class="stats-grid">
+                    <div class="stat">Пробежки: 25 км</div>
+                    <div class="stat">Калории: 1500</div>
+                    <div class="stat">Тренировки: 5</div>
+                </div>
+            </section>
+
+            <section id="players" class="players">
+                <h2>Игроки</h2>
+                <div class="player-wrapper">
+                    <div class="player">
+                        <img src="images/player1.jpg" alt="Игрок 1">
+                        <p>Игрок 1</p>
+                    </div>
+                    <div class="player">
+                        <img src="images/player2.jpg" alt="Игрок 2">
+                        <p>Игрок 2</p>
+                    </div>
+                </div>
+            </section>
+
+            <footer>
+                <p>© 2024 Gold's Gym. Все права защищены.</p>
+            </footer>
+        </div>
+    </div>
+
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Регистрация</h2>
+            <form id="registerForm">
+                <div class="error-container"></div>
+                <input type="text" 
+                       id="regUsername" 
+                       placeholder="Логин" 
+                       required 
+                       minlength="3" 
+                       autocomplete="username">
+                <input type="password" 
+                       id="regPassword" 
+                       placeholder="Пароль" 
+                       required 
+                       minlength="6" 
+                       autocomplete="new-password">
+                <input type="password" 
+                       id="regPasswordConfirm" 
+                       placeholder="Подтвердите пароль" 
+                       required 
+                       minlength="6" 
+                       autocomplete="new-password">
+                <button type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="/js/auth.js"></script>
+</body>
+</html>
